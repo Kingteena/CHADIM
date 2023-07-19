@@ -31,12 +31,15 @@ def home():
 
 @app.route('/search')
 def search():
-    pass
+    result = db.session.execute(db.select(Item))
+    all_items = result.scalars()
+    return render_template('search.html', items=all_items)
 
 
 @app.route('/login')
 def login():
     pass
+
 
 @app.route('/update')
 def update():
@@ -44,5 +47,4 @@ def update():
 
 
 if __name__ == '__main__':
-    # noinspection FlaskDebugMode
-    app.run(debug=True)
+    app.run()
