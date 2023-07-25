@@ -16,8 +16,9 @@ db = SQLAlchemy(app)
 class Item(db.Model):
     __tablename__ = "items"
     code = db.Column(db.String(10), primary_key=True)
+    color = db.Column(db.String(10), nullable=False)
     name = db.Column(db.String(100), nullable=False)
-    description = db.Column(db.String(250), nullable=False)
+    description = db.Column(db.String(250), nullable=True)
     quantity = db.Column(db.Integer, nullable=False)
 
 
