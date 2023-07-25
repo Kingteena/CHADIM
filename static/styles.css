@@ -38,3 +38,7 @@
 .form-container {
     margin-bottom: 5rem;
 }
+
+.clickable{
+    cursor: pointer;
+}

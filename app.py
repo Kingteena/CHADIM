@@ -39,7 +39,7 @@ def search():
 
 @app.route('/login')
 def login():
-    pass
+    return render_template("login.html")
 
 
 @app.route('/update')

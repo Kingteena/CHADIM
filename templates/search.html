@@ -30,7 +30,7 @@
                         <thead class="thead-light">
                         <tr>
                             <th scope="col">Code</th>
-                            <th scope="col">Color</th>
+                            <th scope="col">Colour</th>
                             <th scope="col">Name</th>
                             <th scope="col">Quantity</th>
                             <th scope="col">Description</th>
@@ -38,8 +38,7 @@
                         </thead>
                         <tbody>
                         {% for item in items %}
-                            {#TODO: Make the row clickable and redirectable#}
-                            <tr>
+                            <tr class="clickable" onclick="window.location.assign( {{ "'{url}'".format(url = url_for('home', _external=True)) }} );">
                                 <td>{{ item.code }} </td>
                                 <td>{{ item.name }}</td>
                                 <td>{{ item.color }}</td>
